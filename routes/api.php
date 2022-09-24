@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +28,8 @@ Route::get('/', function (Request $request) {
 });
 
 Route::get('/hello', [ HelloController::class, 'hello' ]);
+Route::get('/date', [ ApiController::class, 'date' ]);
+Route::post('/text', [ ApiController::class, 'text' ]);
 
 // TODO: criar uma rota que retorne a data-hora atual (sugestão: use a função `now()`)
 // TODO: criar uma rota POST que chame uma função em um controller e retorne o texto recebido na requisição
